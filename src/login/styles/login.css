@@ -1,27 +1,4 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
 @import "./best-reset.css";
-
-body {
-  color: #121212;
-}
-
-/* focus는 border가 아니라 outline!!!!! */
-/* focus는 border가 아니라 outline!!!!! */
-/* focus는 border가 아니라 outline!!!!! */
-/* focus는 border가 아니라 outline!!!!! */
-/* focus는 border가 아니라 outline!!!!! */
-/* focus는 border가 아니라 outline!!!!! */
-*:focus {
-  outline: 2px solid #24388d;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  &:visited {
-    color: inherit;
-  }
-}
 
 /* a11y */
 .sr-only {
@@ -36,7 +13,27 @@ a {
   border: 0;
 }
 
-/* 로고(배치 필요) */
+/* 현재 페이지 전체 설정 */
+body {
+  /* content 색을 #121212로 설정 */
+  color: #121212;
+
+  /* focus됐을 때, outline 설정 */
+  *:focus {
+    outline: 2px solid #24388d; /* focus는 border가 아니라 outline!!!!! */
+  }
+
+  /* a 요소를 일반 텍스트처럼 reset */
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:visited {
+      color: inherit;
+    }
+  }
+}
+
+/* 로고 */
 .logo {
   display: block;
   inline-size: 14.375rem;
@@ -49,48 +46,48 @@ a {
   /* 로그인 폼의 기본 스타일 */
   inline-size: 100%;
   padding-inline: 1.25rem;
+  margin: 0 auto;
 
-  /* media는 나중에 선언해야함!!!!!!!! */
-  /* media는 나중에 선언해야함!!!!!!!! */
-  /* media는 나중에 선언해야함!!!!!!!! */
-  /* media는 나중에 선언해야함!!!!!!!! */
-  /* media는 나중에 선언해야함!!!!!!!! */
+  /* 데스크탑 기준 로그인 폼 화면 크기 */
   @media (min-width: 768px) {
+    /* media는 디폴트보다 나중에 선언해야함!!!!!!!! */
     inline-size: 31.25rem;
     padding-inline: 1.25rem;
   }
-  margin: 0 auto;
 
   /* filedset의 border 삭제 */
   fieldset {
     border: none;
   }
 
-  /* 아이디, 비밀번호 폼을 감싸는 wrapper */
+  /* 전체 요소들을 감싸는 wrapper */
   .login-wrapper {
     display: flex;
     flex-flow: column nowrap;
 
-    /* width를 100%로 해서 컨테이너에 꽉 차게 */
+    /* 아이디와 비밀번호 input 요소 */
     .input {
       inline-size: 100%;
       font-size: 0.875rem;
       block-size: 2.8125rem;
-      border: 1px solid #dadada;
+      border: 0.0625rem solid #dadada;
       background-color: #fff;
       margin-bottom: 0.625rem;
+
+      /* 안쪽 content에 padding */
       padding-inline-start: 0.875rem;
 
+      /* focus를 받았을 때, outline과 background color */
       &:focus {
         outline: 2px solid #03cf5d;
         background-color: #e9f0fd;
       }
     }
 
+    /* 에러 메시지 (미완성) */
     .error {
       display: none;
     }
-
     /* .input:invalid + .error {
       display: block;
       color: red;
@@ -109,11 +106,12 @@ a {
       font-weight: bold;
     }
 
+    /* 로그인 상태 유지 & IP 보안 요소들의 wrapper */
     .keep-ip-wrapper {
       display: flex;
       flex-flow: row nowrap;
-      block-size: 1.5rem;
       margin-top: 0.625rem;
+
       /* 로그인 상태 유지 버튼 ON, OFF */
       input#state {
         appearance: none;
@@ -132,12 +130,10 @@ a {
         aspect-ratio: 1/1;
         &::after {
           content: "OFF";
-          line-height: 1.5rem;
           color: #121212;
         }
         &:checked::after {
           content: "ON";
-          line-height: 1.5rem;
           color: #03cf5d;
           font-weight: bold;
         }
