@@ -3,6 +3,7 @@
 /* 카드 레이아웃 */
 .card-container {
   display: grid;
+  gap: 20px;
 
   @media (min-width: 64rem) {
     grid-template-columns: repeat(2, 1fr);

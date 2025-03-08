@@ -4,79 +4,75 @@
 
 .card {
   &.iPad-Pro {
-    background: url("../products/ipad_pro.jpeg") no-repeat;
+    background: url("../products/ipad_pro.jpeg") center top / cover no-repeat;
 
     @media (min-resolution: 192dpi) {
-      background: url("../products/ipad_pro_2x.jpeg") no-repeat;
+      background: url("../products/ipad_pro_2x.jpeg") center top / cover
+        no-repeat;
     }
 
     @media (min-width: 64rem) {
-      background: url("../products/ipad_pro_wide.jpeg") no-repeat;
+      background: url("../products/ipad_pro_wide.jpeg") center top / cover
+        no-repeat;
 
       @media (min-resolution: 192dpi) {
-        background: url("../products/ipad_pro_wide_2x.jpeg") no-repeat;
+        background: url("../products/ipad_pro_wide_2x.jpeg") center top / cover
+          no-repeat;
       }
       br {
         display: none;
       }
     }
-    background-size: cover;
-    background-position: center top;
-
-    block-size: var(--size);
-    inline-size: 100%;
   }
 
   &.iPad-air {
-    background: url("../products/ipad_air.jpeg") no-repeat;
+    background: url("../products/ipad_air.jpeg") center top / cover no-repeat;
 
     @media (min-resolution: 192dpi) {
-      background: url("../products/ipad_air_2x.jpeg") no-repeat;
+      background: url("../products/ipad_air_2x.jpeg") center top / cover
+        no-repeat;
     }
 
     @media (min-width: 64rem) {
-      background: url("../products/ipad_air_wide.jpeg") no-repeat;
+      background: url("../products/ipad_air_wide.jpeg") center top / cover
+        no-repeat;
 
       @media (min-resolution: 192dpi) {
-        background: url("../products/ipad_air_wide_2x.jpeg") no-repeat;
+        background: url("../products/ipad_air_wide_2x.jpeg") center top / cover
+          no-repeat;
       }
       br {
         display: none;
       }
     }
-    background-size: cover;
-    background-position: center top;
-
-    block-size: var(--size);
-    inline-size: 100%;
   }
 
   &.iPhone-15-Pro {
-    background: url("../products/iphone15_pro.jpeg") no-repeat;
+    background: url("../products/iphone15_pro.jpeg") center top / cover
+      no-repeat;
     @media (min-resolution: 192dpi) {
-      background: url("../products/iphone15_pro_2x.jpeg") no-repeat;
+      background: url("../products/iphone15_pro_2x.jpeg") center top / cover
+        no-repeat;
     }
 
     @media (min-width: 64rem) {
-      background: url("../products/iphone15_pro_wide.jpeg") no-repeat;
+      background: url("../products/iphone15_pro_wide.jpeg") center top / cover
+        no-repeat;
       @media (min-resolution: 192dpi) {
-        background: url("../products/iphone15_pro_wide_2x.jpeg") no-repeat;
+        background: url("../products/iphone15_pro_wide_2x.jpeg") center top /
+          cover no-repeat;
       }
       br {
         display: none;
       }
     }
-    background-size: cover;
-    background-position: center top;
-
-    block-size: var(--size);
-    inline-size: 100%;
   }
 
   &.iPhone-15 {
-    background: url("../products/iphone15.jpeg") no-repeat;
+    background: url("../products/iphone15.jpeg") center top / cover no-repeat;
     @media (min-resolution: 192dpi) {
-      background: url("../products/iphone15_2x.jpeg") no-repeat;
+      background: url("../products/iphone15_2x.jpeg") center top / cover
+        no-repeat;
     }
 
     @media (min-width: 64rem) {
@@ -84,17 +80,13 @@
         display: none;
       }
     }
-    background-size: cover;
-    background-position: center top;
-
-    block-size: var(--size);
-    inline-size: 100%;
   }
 
   &.WATCH {
-    background: url("../products/apple_watch.jpeg") no-repeat;
+    background: url("../products/apple_watch.jpeg") center top / cover no-repeat;
     @media (min-resolution: 192dpi) {
-      background: url("../products/apple_watch_2x.jpeg") no-repeat;
+      background: url("../products/apple_watch_2x.jpeg") center top / cover
+        no-repeat;
     }
 
     @media (min-width: 64rem) {
@@ -102,18 +94,14 @@
         display: none;
       }
     }
-    background-size: cover;
-    background-position: center top;
-
-    block-size: var(--size);
-    inline-size: 100%;
   }
 
   &.MacBook-Air {
-    background: url("../products/macbook_air.jpeg") no-repeat;
+    background: url("../products/macbook_air.jpeg") center top / cover no-repeat;
 
     @media (min-resolution: 192dpi) {
-      background: url("../products/macbook_air_2x.jpeg") no-repeat;
+      background: url("../products/macbook_air_2x.jpeg") center top / cover
+        no-repeat;
     }
 
     @media (min-width: 64rem) {
@@ -121,17 +109,13 @@
         display: none;
       }
     }
-    background-size: cover;
-    background-position: center top;
-
-    block-size: var(--size);
-    inline-size: 100%;
   }
 
   &.airPods-Pro {
-    background: url("../products/airpods_pro.jpeg") no-repeat;
+    background: url("../products/airpods_pro.jpeg") center top / cover no-repeat;
     @media (min-resolution: 192dpi) {
-      background: url("../products/airpods_pro_2x.jpeg") no-repeat;
+      background: url("../products/airpods_pro_2x.jpeg") center top / cover
+        no-repeat;
     }
 
     @media (min-width: 64rem) {
@@ -139,14 +123,11 @@
         display: none;
       }
     }
-    background-size: cover;
-    background-position: center top;
-
-    block-size: var(--size);
-    inline-size: 100%;
   }
 
-  /* 내부 요소들 배치: flex */
+  block-size: var(--size);
+  inline-size: 100%;
+
   display: flex;
   flex-flow: column nowrap;
   gap: var(--small-spacing);
@@ -160,10 +141,9 @@
 
   /* 카드 제목 */
   .product-name {
-    /* 미디어 쿼리 */
     font-size: var(--large-text);
-    /* 상단 여백 미디어 쿼리를 이용해서 고칠 것!! */
     margin-block-start: var(--large-spacing);
+    font-weight: bold;
 
     @media (min-width: 64rem) {
       font-size: var(--extra-large-text);
@@ -173,9 +153,7 @@
 
   /* 부제목 */
   .product-info {
-    /* 미디어 쿼리 */
     font-size: var(--base-text);
-
     line-height: var(--line-normal);
 
     @media (min-width: 64rem) {
@@ -202,8 +180,6 @@
     padding-block: var(--x-small-spacing);
     padding-inline: var(--small-spacing);
     border-radius: 25px;
-
-    /* 버튼 글자 크기!!! 미디어 쿼리 이용 */
     font-size: var(--xx-small-text);
 
     @media (min-width: 64rem) {
@@ -224,22 +200,20 @@
     }
   }
 
-  &.black {
-    h2,
-    p {
-      color: var(--black);
+  &:nth-child(even) h2,
+  &:nth-child(even) p {
+    color: var(--black);
+  }
+
+  &:nth-child(even) .btn-wrapper {
+    .more {
+      background-color: var(--black);
+      color: var(--white);
     }
 
-    .btn {
-      &.more {
-        background-color: var(--black);
-        color: var(--white);
-      }
-
-      &.price {
-        color: var(--black);
-        border: 1px solid var(--black);
-      }
+    .price {
+      color: var(--black);
+      border: 1px solid var(--black);
     }
   }
 }
